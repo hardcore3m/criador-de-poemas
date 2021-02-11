@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Document</title>
+    <title>Demonstração de sorteio</title>
 </head>
 
 <body>
@@ -25,28 +25,46 @@
         <input type="button" value="Sortear" onclick="sorteio();">
     </section>
     <section>
-        <p id="estrofe1"></p>
-        <p id="estrofe2"></p>
-        <p id="estrofe3"></p>
-        <p id="estrofe4"></p>
-        <p id="estrofe5"></p>
+        <div class="main">
+            <p id="titulo"></p>
+            <p id="estrofe1"></p>
+            <p id="estrofe2"></p>
+            <p id="estrofe3"></p>
+            <p id="estrofe4"></p>
+            <br>
+            <p id="estrofe5"></p>
+            <p id="estrofe6"></p>
+            <p id="estrofe7"></p>
+            <p id="estrofe8"></p>
+            <br>
+            <p id="estrofe9"></p>
+            <p id="estrofe10"></p>
+            <p id="estrofe11"></p>
+            <p id="estrofe12"></p>
+            <p id="assinatura" style="text-align: right; font-size: 14pt;">Rafael Marins</p>
+        </div>
     </section>
     <script>
         function sorteio() {
-            var palavras = 5;
+            var palavras = 51;
             var random = [];
             for (var i = 0; i < palavras; i++) {
                 var temp = Math.floor(Math.random() * qtd);
                 random.push(temp)
             }
-            estrofe1.innerHTML = sub2p[random[0]] +' '+pres2[random[1]]+' '+sub1p[random[2]]+' como '+abs[random[4]]+'.';
-            estrofe2.innerHTML = 'Sorteio 2:' + random[0].valueOf;
-            estrofe3.innerHTML = 'Sorteio 3:' + random[0];
-            estrofe4.innerHTML = 'Sorteio 4:' + random[1];
-            estrofe5.innerHTML = 'Sorteio 5:' + random[2];
-            // arcano1.innerHTML = '<h4>Prós: </h4>' + '<h6>' + arcano[random[0]].numero + " - " + arcano[random[0]].nome + '</h6>' + '<br><p>' + arcano[random[0]].conselho + '</p><hr>';
-            // arcano2.innerHTML = '<h4>Contras: </h4>' + '<h6>' + arcano[random[1]].numero + " - " + arcano[random[1]].nome + '</h6>' + '<br><p>' + arcano[random[1]].advertencia + '</p><hr>';
-
+            titulo.innerHTML = '<h3>'+abstr[random[8]] + '</h3>';
+            estrofe1.innerHTML = sub2p[random[0]] + ' ' + pres2[random[1]] + ' ' + sub1p[random[2]] + ' como ' + abstr[random[3]] + '.';
+            estrofe2.innerHTML = sub2p[random[5]] + ' de ' + adjma[random[6]] + ' feitio e ' + adjne[random[7]] + ' pudor ';
+            estrofe3.innerHTML = prtp1[random[9]] +' ' +senti[random[10]] + ' ' + adjne[random[11]] + ' em ' + abstr[random[12]] + '.';
+            estrofe4.innerHTML = sub2p[random[13]] + ' ' + pres2[random[14]] + ' ' + sub1p[random[15]] + ' como ' + abstr[random[16]] + '.';
+            estrofe5.innerHTML = sub2p[random[17]] + ' ' + pres2[random[18]] + ' ' + sub1p[random[19]] + ' como ' + abstr[random[20]] + '.';
+            estrofe6.innerHTML = sub2p[random[21]] + ' ' + pres2[random[22]] + ' ' + sub1p[random[23]] + ' como ' + abstr[random[24]] + '.';
+            estrofe7.innerHTML = sub2p[random[25]] + ' ' + pres2[random[26]] + ' ' + sub1p[random[27]] + ' como ' + abstr[random[28]] + '.';
+            estrofe8.innerHTML = sub2p[random[29]] + ' ' + pres2[random[30]] + ' ' + sub1p[random[31]] + ' como ' + abstr[random[32]] + '.';
+            estrofe9.innerHTML = sub2p[random[33]] + ' ' + pres2[random[34]] + ' ' + sub1p[random[35]] + ' como ' + abstr[random[36]] + '.';
+            estrofe10.innerHTML = sub2p[random[37]] + ' ' + pres2[random[38]] + ' ' + sub1p[random[39]] + ' como ' + abstr[random[40]] + '.';
+            estrofe11.innerHTML = sub2p[random[43]] + ' ' + pres2[random[44]] + ' ' + sub1p[random[45]] + ' como ' + abstr[random[46]] + '.';
+            estrofe12.innerHTML = sub2p[random[47]] + ' ' + pres2[random[48]] + ' ' + sub1p[random[49]] + ' como ' + abstr[random[50]] + '.';
         }
     </script>
 

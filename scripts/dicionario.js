@@ -1,23 +1,37 @@
 //Abstração
-var abstr = ['Uma linda tarde de outono', 'O doce beijo da felicidade', 'O mais sincero âmago', 'O desejo mais Pueril'];
-var senti = ['Amor','Esperança','Felicidade','Tristeza'];
+var abstr = ['uma linda tarde de outono', 'O doce beijo da felicidade', 'o mais sincero âmago', 'o desejo mais pueril','o sombrio silêncio da madrugada'];
+var senti = ['o amor', 'a esperança', 'a felicidade', 'a tristeza','o anseio'];
 // Substantivos
-var sub1p = ['Meu coração', 'Minha alma', 'Minha Razão', 'Meu rancor'];
-var sub2p = ['Teu colo', 'Teu peito','Tua pele','Teu Corpo'];
+var sub1p = ['meu coração', 'minha alma', 'minha Razão', 'meu rancor','meu medo'];
+var sub2p = ['teu colo', 'teu peito', 'tua pele', 'teu corpo','tua mão'];
 //adjetivos
-var adjfm=['Angélica', 'bela','única','vívida'];
-var adjne=['Radiante', 'Exuberante','Confortante','Invejável']
+var adjfm = ['angélica', 'bela', 'única', 'vívida','estranha'];
+var adjne = ['radiante', 'exuberante', 'confortante', 'invejável','infalível'];
+var adjma = ['cansado', 'ferido', 'amável', 'belo','vivo'];
 
-//Verbos
-var pres2 = ['Fere','Entende','Supera', 'Sublima'];
+//verbos em primeira pessoa
+var prtp1 = ['senti','escolhi','amei','vivi','lambi','corri']
+//Verbos segunda pessoa
+var pres2 = ['Fere', 'Entende', 'Supera', 'Sublima','escolhe'];
+
 // Controle
-var qtd = sub1p.length;
-console.log('abstr = '+abstr.length);
-console.log('Senti = '+senti.length);
-console.log('Sub1p = '+sub1p.length);
-console.log('Sub2p = '+sub2p.length);
-console.log('adjfm = '+adjfm.length);
-console.log('adjne = '+adjne.length);
-console.log('pres2 = '+pres2.length);
+//O prmeiro valora me mostra o valor do menor array
+//O segundo onde procurar
 
+var minimo =[];
+ minimo.push(abstr.length);
+ minimo.push(senti.length);
+ minimo.push(sub1p.length);
+ minimo.push(sub2p.length);
+ minimo.push(adjfm.length);
+ minimo.push(adjne.length);
+ minimo.push(adjma.length);
+ minimo.push(pres2.length);
+ minimo.push(prtp1.length);
 
+ var qtd = minimo.map(Number).reduce(function(a, b) {
+    return Math.min(a, b);
+  });
+
+console.log(qtd);
+console.log(minimo);
