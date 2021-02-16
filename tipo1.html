@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Demonstração de sorteio</title>
 </head>
 
@@ -18,6 +18,8 @@
             <a href="tipo2.html">Estrutura 2</a>
             <a href="tipo3.html">Estrutura 3</a>
             <a href="tipo4.html">Estrutura 4</a>
+            <a href="gerenciamento.html">Estatísticas para nerds</a>
+            <a href="conjugador.html">Conjugação de verbos</a>
         </div>
     </header>
 
@@ -52,19 +54,19 @@
                 var temp = Math.floor(Math.random() * qtd);
                 random.push(temp)
             }
-            titulo.innerHTML = '<h3>'+abstr[random[8]] + '</h3>';
-            estrofe1.innerHTML = sub2p[random[0]] + ' ' + pres2[random[1]] + ' ' + sub1p[random[2]] + ' como ' + abstr[random[3]] + '.';
-            estrofe2.innerHTML = sub2p[random[5]] + ' de ' + adjma[random[6]] + ' feitio e ' + adjne[random[7]] + ' pudor ';
-            estrofe3.innerHTML = prtp1[random[9]] +' ' +senti[random[10]] + ' ' + adjne[random[11]] + ' em ' + abstr[random[12]] + '.';
-            estrofe4.innerHTML = sub2p[random[13]] + ' ' + pres2[random[14]] + ' ' + sub1p[random[15]] + ' como ' + abstr[random[16]] + '.';
-            estrofe5.innerHTML = sub2p[random[17]] + ' ' + pres2[random[18]] + ' ' + sub1p[random[19]] + ' como ' + abstr[random[20]] + '.';
-            estrofe6.innerHTML = sub2p[random[21]] + ' ' + pres2[random[22]] + ' ' + sub1p[random[23]] + ' como ' + abstr[random[24]] + '.';
-            estrofe7.innerHTML = sub2p[random[25]] + ' ' + pres2[random[26]] + ' ' + sub1p[random[27]] + ' como ' + abstr[random[28]] + '.';
-            estrofe8.innerHTML = sub2p[random[29]] + ' ' + pres2[random[30]] + ' ' + sub1p[random[31]] + ' como ' + abstr[random[32]] + '.';
-            estrofe9.innerHTML = sub2p[random[33]] + ' ' + pres2[random[34]] + ' ' + sub1p[random[35]] + ' como ' + abstr[random[36]] + '.';
-            estrofe10.innerHTML = sub2p[random[37]] + ' ' + pres2[random[38]] + ' ' + sub1p[random[39]] + ' como ' + abstr[random[40]] + '.';
-            estrofe11.innerHTML = sub2p[random[43]] + ' ' + pres2[random[44]] + ' ' + sub1p[random[45]] + ' como ' + abstr[random[46]] + '.';
-            estrofe12.innerHTML = sub2p[random[47]] + ' ' + pres2[random[48]] + ' ' + sub1p[random[49]] + ' como ' + abstr[random[50]] + '.';
+            titulo.innerHTML = '<h3>' + abstrato[random[8]] + '</h3>';
+            estrofe1.innerHTML = subst2p[random[0]] + ' ' + reg3SPresInd[random[1]] + ' ' + subst1p[random[2]] + ' como ' + abstrato[random[3]] + '.';
+            estrofe2.innerHTML = subst2p[random[5]] + ' de ' + adjetivoM[random[6]] + ' feitio e ' + adjetivoN[random[7]] + ' pudor ';
+            estrofe3.innerHTML = reg1SPretPerfInd[random[9]] + ' ' + senti[random[10]] + ' ' + adjetivoN[random[11]] + ' n' + abstrato[random[12]] + '.';
+            estrofe4.innerHTML = subst2p[random[13]] + ' ' + reg3SPresInd[random[14]] + ' ' + subst1p[random[15]] + ' como ' + abstrato[random[16]] + '.';
+            estrofe5.innerHTML = subst2p[random[17]] + ' ' + reg3SPresInd[random[18]] + ' ' + subst1p[random[19]] + ' como ' + abstrato[random[20]] + '.';
+            estrofe6.innerHTML = subst2p[random[21]] + ' ' + reg3SPresInd[random[22]] + ' ' + subst1p[random[23]] + ' como ' + abstrato[random[24]] + '.';
+            estrofe7.innerHTML = subst2p[random[25]] + ' ' + reg3SPresInd[random[26]] + ' ' + subst1p[random[27]] + ' como ' + abstrato[random[28]] + '.';
+            estrofe8.innerHTML = subst2p[random[29]] + ' ' + reg3SPresInd[random[30]] + ' ' + subst1p[random[31]] + ' como ' + abstrato[random[32]] + '.';
+            estrofe9.innerHTML = subst2p[random[33]] + ' ' + reg3SPresInd[random[34]] + ' ' + subst1p[random[35]] + ' como ' + abstrato[random[36]] + '.';
+            estrofe10.innerHTML = subst2p[random[37]] + ' ' + reg3SPresInd[random[38]] + ' ' + subst1p[random[39]] + ' como ' + abstrato[random[40]] + '.';
+            estrofe11.innerHTML = subst2p[random[43]] + ' ' + reg3SPresInd[random[44]] + ' ' + subst1p[random[45]] + ' como ' + abstrato[random[46]] + '.';
+            estrofe12.innerHTML = subst2p[random[47]] + ' ' + reg3SPresInd[random[48]] + ' ' + subst1p[random[49]] + ' como ' + abstrato[random[50]] + '.';
         }
     </script>
 

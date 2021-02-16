@@ -11,6 +11,22 @@
 
 <body>
     <header>
+        <h1>Estrutura 1</h1>
+        <div class="nav">
+            <a href="index.html">Início</a>
+            <a href="tipo1.html">Estrutura 1</a>
+            <a href="tipo2.html">Estrutura 2</a>
+            <a href="tipo3.html">Estrutura 3</a>
+            <a href="tipo4.html">Estrutura 4</a>
+            <a href="gerenciamento.html">Estatísticas para nerds</a>
+            <a href="conjugador.html">Conjugação de verbos</a>
+        </div>
+    </header>
+
+    <section>
+        <input type="button" value="Sortear" onclick="sorteio();">
+    </section>
+    <header>
         <h1>Gerador de Poesias</h1>
         <div class="nav">
             <a href="index.html">Início</a>
@@ -20,8 +36,78 @@
             <a href="tipo4.html">Estrutura 4</a>
         </div>
     </header>
+    <div class="main">
+        <div class="titulo">
+            <h4>Poema Original:Os Poemas <br>
+                Autor:Mário Quintana
+            </h4>
+        </div>
+        <div class="original">
+            <p>
+                <h3>Os Poemas</h3>
+    Os poemas são pássaros que chegam <br>
+    não se sabe de onde e pousam<br>
+    no livro que lês.<br>
+    <br>
+    Quando fechas o livro, eles alçam voo<br>
+    como de um alçapão.<br>
+    Eles não têm pouso<br>
+    nem porto<br>
+    alimentam-se um instante em cada par de mãos<br>
+    e partem. E olhas, então, essas tuas mãos vazias,<br>
+    no maravilhado espanto de saberes<br>
+    que o alimento deles já estava em ti…<br>
+            </p>
+    
+    
+        </div>
+        <div class="alterado">
+    
+    <p id="titulo"></p>
+    <p id="estrofe1"></p>
+    Os poemas são pássaros que chegam <br>
+    não se sabe de onde e pousam<br>
+    no livro que lês.<br>
+    <br>
+    Quando fechas o livro, eles alçam voo<br>
+    como de um alçapão.<br>
+    Eles não têm pouso<br>
+    nem porto<br>
+    alimentam-se um instante em cada par de mãos<br>
+    e partem. E olhas, então, essas tuas mãos vazias,<br>
+    no maravilhado espanto de saberes<br>
+    que o alimento deles já estava em ti…<br>
+    
+    
+    
+        </div>
+    </div>
+    <script>
+        function sorteio() {
+            var palavras = 51;
+            var random = [];
+            for (var i = 0; i < palavras; i++) {
+                var temp = Math.floor(Math.random() * qtd);
+                random.push(temp)
+            }
+            titulo.innerHTML = '<h3>' + substMSing[random[0]] + '</h3>';
+             estrofe1.innerHTML = substMSing[random[0]] + ' ' + irr3PPresInd[random[1]] + ' ' + subst1p[random[2]] + ' como ' + abstrato[random[3]] + '.';
+            estrofe2.innerHTML = subst2p[random[5]] + ' de ' + adjetivoM[random[6]] + ' feitio e ' + adjetivoN[random[7]] + ' pudor ';
+            estrofe3.innerHTML = pretind1ps[random[9]] + ' ' + senti[random[10]] + ' ' + adjetivoN[random[11]] + ' n' + abstrato[random[12]] + '.';
+            estrofe4.innerHTML = subst2p[random[13]] + ' ' + presind3ps[random[14]] + ' ' + subst1p[random[15]] + ' como ' + abstrato[random[16]] + '.';
+            estrofe5.innerHTML = subst2p[random[17]] + ' ' + presind3ps[random[18]] + ' ' + subst1p[random[19]] + ' como ' + abstrato[random[20]] + '.';
+            estrofe6.innerHTML = subst2p[random[21]] + ' ' + presind3ps[random[22]] + ' ' + subst1p[random[23]] + ' como ' + abstrato[random[24]] + '.';
+            estrofe7.innerHTML = subst2p[random[25]] + ' ' + presind3ps[random[26]] + ' ' + subst1p[random[27]] + ' como ' + abstrato[random[28]] + '.';
+            estrofe8.innerHTML = subst2p[random[29]] + ' ' + presind3ps[random[30]] + ' ' + subst1p[random[31]] + ' como ' + abstrato[random[32]] + '.';
+            estrofe9.innerHTML = subst2p[random[33]] + ' ' + presind3ps[random[34]] + ' ' + subst1p[random[35]] + ' como ' + abstrato[random[36]] + '.';
+            estrofe10.innerHTML = subst2p[random[37]] + ' ' + presind3ps[random[38]] + ' ' + subst1p[random[39]] + ' como ' + abstrato[random[40]] + '.';
+            estrofe11.innerHTML = subst2p[random[43]] + ' ' + presind3ps[random[44]] + ' ' + subst1p[random[45]] + ' como ' + abstrato[random[46]] + '.';
+            estrofe12.innerHTML = subst2p[random[47]] + ' ' + presind3ps[random[48]] + ' ' + subst1p[random[49]] + ' como ' + abstrato[random[50]] + '.';
+        }
+    </script>
 
-
+<script src="scripts/dicionario.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 
 </html>

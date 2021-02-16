@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="gerenciamento">
+        <h1>Gerenciamento de dados do dicionário</h1>
+
+        <div class="quadro">
+            <div>
+                <h2>Estatísticas</h2>
+                <p id="estatisticas"></p>
+            </div>
+            <table id="dados"> </table>
+
+        </div>
+
+        <div class="quadro">
+            <div>
+                <h2>Verbos</h2>
+                <p id="qtdVerbos"></p>
+            </div>
+            <table id="presind">
+                <tr>
+                    <th> Presente do indicativo</th>
+                </tr>
+                <tr>
+                    <td id="presind1psConj"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script>
+        function controleDeDados() {
+
+            var abstratos = '<tr><th>Abstratos</th></tr>' + '<tr><td><b> Quantidade: ' + abstrato.length + '</b></td></tr>' + '<tr><td>' + abstrato + '</td></tr>';
+            var sentimentos = '<tr><th>Verbo Sentir</th></tr>' + '<tr><td><b> Quantidade: ' + senti.length + '</b></td></tr>' + '<tr><td>' + senti + '</td></tr>';
+            var substs1p = '<tr><th>Substantivos pronominados em primeira pessoa</th></tr>' + '<tr><td><b> Quantidade: ' + subst1p.length + '</b></td></tr>' + '<tr><td>' + subst1p + '</td></tr>';
+            var substs2p = '<tr><th>Substantivos pronominados em segunda pessoa</th></tr>' + '<tr><td><b> Quantidade: ' + subst2p.length + '</b></td></tr>' + '<tr><td>' + subst2p + '</td></tr>';
+            var adjetivosM = '<tr><th>Adjetivos Masculinos</th></tr>' + '<tr><td><b> Quantidade: ' + adjetivoM.length + '</b></td></tr>' + '<tr><td>' + adjetivoM + '</td></tr>';
+            var adjetivosF = '<tr><th>Adjetivos Femininos</th></tr>' + '<tr><td><b> Quantidade: ' + adjetivoF.length + '</b></td></tr>' + '<tr><td>' + adjetivoF + '</td></tr>';
+            var adjetivosN = '<tr><th>Adjetivos Neutros</th></tr>' + '<tr><td><b> Quantidade: ' + adjetivoN.length + '</b></td></tr>' + '<tr><td>' + adjetivoN + '</td></tr>';
+
+            dados.innerHTML = abstratos + sentimentos + substs1p+substs2p + adjetivosM + adjetivosN + adjetivosF;
+
+            estatisticas.innerHTML = 'Menor Valor de array: ' + qtd + '<br>' + 'Maior Valor de array: ' + max + '<br>';
+            qtdVerbos.innerHTML = 'Quantidade de verbos: ' + presind1ps.length;
+            presind1psConj.innerHTML = presind1ps;
+
+        }
+        window.onload = controleDeDados;
+    </script>
+    <script src="scripts/dicionario.js"></script>
+</body>
+
+</html>

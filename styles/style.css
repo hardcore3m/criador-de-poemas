@@ -1,0 +1,57 @@
+/*
+Esquema de cores
+cor 1 #071a52
+cor 2 #086972
+cor 3 #17b978
+cor 4 #a7ff83
+
+
+
+*/
+
+@font-face {
+    font-family: Homemade;
+    src: url(/fonts/HomemadeApple-Regular.ttf)
+}
+
+.main {
+    background-image: url("/img/oldpaper2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: Homemade;
+    font-size: 16pt;
+    padding: 20px;
+}
+
+body {
+    background-color: #071a52;
+}
+
+.gerenciamento {
+    width: 850px;
+    margin: auto;
+}
+
+.gerenciamento h1 {
+    background-color: #086972;
+    text-align: center;
+    padding: 5px;
+    width: 800px;
+    border-radius: 10px;
+}
+
+.quadro {
+    background-color: #a7ff83;
+    padding: 5px;
+    width: 800px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.quadro h2, th {
+    background-color: #17b978;
+    padding-top: 5px;
+}
