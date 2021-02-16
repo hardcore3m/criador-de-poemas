@@ -4,30 +4,78 @@ cor 1 #071a52
 cor 2 #086972
 cor 3 #17b978
 cor 4 #a7ff83
-
-
-
 */
 
 @font-face {
     font-family: Homemade;
     src: url(/fonts/HomemadeApple-Regular.ttf)
 }
+@font-face {
+    font-family: JustAnotherHand;
+    src: url(/fonts/JustAnotherHand-Regular.ttf)
+}
+@font-face {
+    font-family: PatrickHand;
+    src: url(/fonts/PatrickHand-Regular.ttf)
+}
+@font-face {
+    font-family: LaBelleAurore;
+    src: url(/fonts/LaBelleAurore-Regular.ttf)
+}
+@font-face {
+    font-family: ShadowsIntoLight;
+    src: url(/fonts/ShadowsIntoLight-Regular.ttf)
+}
+@font-face {
+    font-family: LongCang;
+    src: url(/fonts/LongCang-Regular.ttf)
+}
+.fonte-1{
+    font-family: Homemade;
+    font-size: 16pt;
+}
+.fonte-2{
+    font-family: JustAnotherHand;
+    font-size: 26pt;
+}
+.fonte-3{
+    font-family: PatrickHand;
+    font-size: 16pt;
+}
+.fonte-4{
+    font-family: LaBelleAurore;
+    font-size: 16pt;
+}
+.fonte-5{
+    font-family: LongCang;
+    font-size: 26pt;
+}
+.fonte-6{
+    font-family: ShadowsIntoLight;
+    font-size: 16pt;
+}
 
-.main {
+.background-1{
     background-image: url("/img/oldpaper2.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+.background-2{
+    background-image: url("/img/oldpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main {
+    
     width: 80%;
     margin: auto;
     text-align: center;
-    font-family: Homemade;
-    font-size: 16pt;
+    
     padding: 20px;
 }
 
 body {
-    background-color: #071a52;
+    background-color: #a7ff83;
 }
 
 .gerenciamento {
@@ -54,4 +102,21 @@ body {
 .quadro h2, th {
     background-color: #17b978;
     padding-top: 5px;
+}
+.original{
+    
+    background-color: #17b978;
+    float: left;
+    width: 45%;
+    padding: 10px;
+    margin-left: 10px; 
+    height: auto; 
+    margin-bottom: 10px;
+    
+}
+.alterado{
+    background-color: #17b978;
+    float: left;
+    width: 45%;
+    padding: 10px;
 }

@@ -4,13 +4,17 @@ var senti = ['o amor', 'a esperança', 'a felicidade', 'a tristeza', 'o anseio']
 abstrato.sort(() => Math.random() - 0.5);
 senti.sort(() => Math.random() - 0.5);
 // Substantivos
-var subst1p = ['meu coração', 'minha alma', 'minha Razão', 'meu rancor', 'meu medo'];
+var subst1p = ['meu coração', 'minha alma', 'minha razão', 'meu rancor', 'meu medo'];
 var subst2p = ['teu colo', 'teu peito', 'tua pele', 'teu corpo', 'tua mão'];
-var substMSing = ['O Livro', 'o sapato', 'o telefone', 'o radio', 'o portão', 'o computador', 'o ferro','o bastão','o óculos']
+var substMSing = ['livro', 'sapato', 'telefone', 'radio', 'portão', 'computador', 'ferro','bastão','óculos']
 var animal = ['borboleta','vaca','pássaro','zebra','macaco','gato','corvo','pato','cobra','aranha','serpente']
+var corpo = ['mão','pé','sovaco','cabelo','seio','bumbum','abdômen','testa','cabeça','braço','perna','orelha','olho','boca','retina','mamilo','umbigo']
+var corpoFemSing=['mão','cabeça','retina','testa','perna','orelha','boca','clavícula','unha','narina','nádega'];
 subst1p.sort(() => Math.random() - 0.5);
 subst2p.sort(() => Math.random() - 0.5);
 substMSing.sort(() => Math.random() - 0.5);
+animal.sort(() => Math.random() - 0.5);
+corpo.sort(() => Math.random() - 0.5);
 //adjetivos
 var adjetivoF = ['angélica', 'bela', 'única', 'vívida', 'estranha'];
 var adjetivoN = ['radiante', 'exuberante', 'confortante', 'invejável', 'infalível'];
@@ -40,7 +44,7 @@ let reg1PPretPerfInd = [];
 let reg2PPretPerfInd = [];
 let reg3PPretPerfInd = [];
 
-//Pretérito perfeito do indicativo
+//Pretérito imperfeito do indicativo
 let reg1SPretImpInd = [];
 let reg2SPretImpInd = [];
 let reg3SPretImpInd = [];
