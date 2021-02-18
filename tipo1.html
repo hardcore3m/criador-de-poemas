@@ -11,7 +11,6 @@
 
 <body>
     <header>
-        <h1>Estrutura 1</h1>
         <div class="nav">
             <a href="index.html">Início</a>
             <a href="tipo1.html">Estrutura 1</a>
@@ -22,8 +21,8 @@
             <a href="conjugador.html">Conjugação de verbos</a>
         </div>
     </header>
-
     <section>
+        <h1>Estrutura 1</h1>
         <input type="button" value="Sortear" onclick="sorteio();">
     </section>
     <section>
@@ -55,18 +54,18 @@
                 random.push(temp)
             }
             titulo.innerHTML = '<h3>' + abstrato[random[8]] + '</h3>';
-            estrofe1.innerHTML = subst2p[random[0]] + ' ' + reg3SPresInd[random[1]] + ' ' + subst1p[random[2]] + ' como ' + abstrato[random[3]] + '.';
-            estrofe2.innerHTML = subst2p[random[5]] + ' de ' + adjetivoM[random[6]] + ' feitio e ' + adjetivoN[random[7]] + ' pudor ';
-            estrofe3.innerHTML = reg1SPretPerfInd[random[9]] + ' ' + senti[random[10]] + ' ' + adjetivoN[random[11]] + ' n' + abstrato[random[12]] + '.';
-            estrofe4.innerHTML = subst2p[random[13]] + ' ' + reg3SPresInd[random[14]] + ' ' + subst1p[random[15]] + ' como ' + abstrato[random[16]] + '.';
-            estrofe5.innerHTML = subst2p[random[17]] + ' ' + reg3SPresInd[random[18]] + ' ' + subst1p[random[19]] + ' como ' + abstrato[random[20]] + '.';
-            estrofe6.innerHTML = subst2p[random[21]] + ' ' + reg3SPresInd[random[22]] + ' ' + subst1p[random[23]] + ' como ' + abstrato[random[24]] + '.';
-            estrofe7.innerHTML = subst2p[random[25]] + ' ' + reg3SPresInd[random[26]] + ' ' + subst1p[random[27]] + ' como ' + abstrato[random[28]] + '.';
-            estrofe8.innerHTML = subst2p[random[29]] + ' ' + reg3SPresInd[random[30]] + ' ' + subst1p[random[31]] + ' como ' + abstrato[random[32]] + '.';
-            estrofe9.innerHTML = subst2p[random[33]] + ' ' + reg3SPresInd[random[34]] + ' ' + subst1p[random[35]] + ' como ' + abstrato[random[36]] + '.';
-            estrofe10.innerHTML = subst2p[random[37]] + ' ' + reg3SPresInd[random[38]] + ' ' + subst1p[random[39]] + ' como ' + abstrato[random[40]] + '.';
-            estrofe11.innerHTML = subst2p[random[43]] + ' ' + reg3SPresInd[random[44]] + ' ' + subst1p[random[45]] + ' como ' + abstrato[random[46]] + '.';
-            estrofe12.innerHTML = subst2p[random[47]] + ' ' + reg3SPresInd[random[48]] + ' ' + subst1p[random[49]] + ' como ' + abstrato[random[50]] + '.';
+            estrofe1.innerHTML = 'tua ' + corpoFemSing[random[0]] + ' ' + reg3SPresInd[random[1]] + ' meu ' + corpoMascSing[random[2]] + ' como ' + abstrato[random[3]] + '.';
+            estrofe2.innerHTML = 'tua ' + corpoFemSing[random[5]] + ' de ' + adjetivoM[random[6]] + ' feitio e ' + adjetivoN[random[7]] + ' pudor ';
+            estrofe3.innerHTML = reg1SPretPerfInd[random[9]] + ' ' + sentiSingPron[random[10]] + ' ' + adjetivoN[random[11]] + ' n' + abstrato[random[12]] + '.';
+            estrofe4.innerHTML = irr1SPretPerfInd[random[13]] + ' meu ' + corpoMascSing[random[14]] + ' na tua ' + corpoFemSing[random[15]] + ' enquanto ' + reg2SPretImpInd[random[16]] + ' ' +substMSing[random[17]];
+            estrofe5.innerHTML = reg1SPresInd[random[19]] + ' com ' +sentiSing[random[20]] + ' enquanto '+irr1SPresInd[random[21]]+' '+ abstrato[random[22]];
+            estrofe6.innerHTML ='lá '+ irr3PPretImpInd[random[23]] + ' tantos momentos de ' +sentiMasc[random[24]] + ' e '+sentiFem[random[25]];
+            // estrofe7.innerHTML = corpoFemSing[random[25]] + ' ' + reg3SPresInd[random[26]] + ' ' + corpoMascSing[random[27]] + ' como ' + abstrato[random[28]] + '.';
+            // estrofe8.innerHTML = corpoFemSing[random[29]] + ' ' + reg3SPresInd[random[30]] + ' ' + corpoMascSing[random[31]] + ' como ' + abstrato[random[32]] + '.';
+            // estrofe9.innerHTML = corpoFemSing[random[33]] + ' ' + reg3SPresInd[random[34]] + ' ' + corpoMascSing[random[35]] + ' como ' + abstrato[random[36]] + '.';
+            // estrofe10.innerHTML = corpoFemSing[random[37]] + ' ' + reg3SPresInd[random[38]] + ' ' + corpoMascSing[random[39]] + ' como ' + abstrato[random[40]] + '.';
+            // estrofe11.innerHTML = corpoFemSing[random[43]] + ' ' + reg3SPresInd[random[44]] + ' ' + corpoMascSing[random[45]] + ' como ' + abstrato[random[46]] + '.';
+            // estrofe12.innerHTML = corpoFemSing[random[47]] + ' ' + reg3SPresInd[random[48]] + ' ' + corpoMascSing[random[49]] + ' como ' + abstrato[random[50]] + '.';
         }
     </script>
 

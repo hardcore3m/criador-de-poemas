@@ -1,26 +1,58 @@
 //Abstração
 var abstrato = ['uma linda tarde de outono', 'o doce beijo da felicidade', 'o mais sincero âmago', 'o desejo mais pueril', 'o sombrio silêncio da madrugada'];
-var senti = ['o amor', 'a esperança', 'a felicidade', 'a tristeza', 'o anseio'];
 abstrato.sort(() => Math.random() - 0.5);
-senti.sort(() => Math.random() - 0.5);
+var sentiMasc = ['amor', 'anseio', 'ódio', 'rancor', 'desespero', 'enamoro', 'encanto'];
+sentiMasc.sort(() => Math.random() - 0.5);
+var sentiFem = ['esperança', 'felicidade', 'tristeza', 'inspiração', 'alegria', 'gula', 'ira', 'luxúria', 'inveja', 'cobiça', 'preguiça', 'avareza',];
+sentiFem.sort(() => Math.random() - 0.5);
+var sentiSing = [];
+for (let i = 0; i < sentiFem.length; i++) {
+  sentiSing.push(sentiFem[i]);
+}
+for (let i = 0; i < sentiMasc.length; i++) {
+  sentiSing.push(sentiMasc[i]);
+}
+sentiSing.sort(() => Math.random() - 0.5);
+var sentiSingPron = [];
+for (let i = 0; i < sentiFem.length; i++) {
+  sentiSingPron.push('tua ' + sentiFem[i]);
+}
+for (let i = 0; i < sentiMasc.length; i++) {
+  sentiSingPron.push('teu ' + sentiMasc[i]);
+}
+sentiSingPron.sort(() => Math.random() - 0.5);
+
 // Substantivos
 var subst1p = ['meu coração', 'minha alma', 'minha razão', 'meu rancor', 'meu medo'];
-var subst2p = ['teu colo', 'teu peito', 'tua pele', 'teu corpo', 'tua mão'];
-var substMSing = ['livro', 'sapato', 'telefone', 'radio', 'portão', 'computador', 'ferro','bastão','óculos']
-var animal = ['borboleta','vaca','pássaro','zebra','macaco','gato','corvo','pato','cobra','aranha','serpente']
-var corpo = ['mão','pé','sovaco','cabelo','seio','bumbum','abdômen','testa','cabeça','braço','perna','orelha','olho','boca','retina','mamilo','umbigo']
-var corpoFemSing=['mão','cabeça','retina','testa','perna','orelha','boca','clavícula','unha','narina','nádega'];
 subst1p.sort(() => Math.random() - 0.5);
+var subst2p = ['teu colo', 'teu peito', 'tua pele', 'teu corpo', 'tua mão'];
 subst2p.sort(() => Math.random() - 0.5);
+var substMSing = ['livro', 'sapato', 'telefone', 'radio', 'portão', 'computador', 'ferro', 'bastão', 'óculos'];
 substMSing.sort(() => Math.random() - 0.5);
+var animal = [];
+var animalFem = ['borboleta', 'vaca', 'cabra', 'zebra', 'enguia', 'doninha', 'galinha', 'onça', 'cobra', 'aranha', 'serpente'];
+animalFem.sort(() => Math.random() - 0.5);
+var animalMasc = ['borboleta', 'vaca', 'pássaro', 'zebra', 'macaco', 'gato', 'corvo', 'pato', 'cobra', 'aranha', 'serpente'];
+for (let i = 0; i < animalFem.length; i++) {
+  animal.push(animalFem[i]);
+}
+for (let i = 0; i < animalMasc.length; i++) {
+  animal.push(animalMasc[i]);
+}
 animal.sort(() => Math.random() - 0.5);
+var corpo = ['mão', 'pé', 'sovaco', 'cabelo', 'seio', 'bumbum', 'abdômen', 'testa', 'cabeça', 'braço', 'perna', 'orelha', 'olho', 'boca', 'retina', 'mamilo', 'umbigo'];
 corpo.sort(() => Math.random() - 0.5);
+var corpoMascSing = ['pé', 'sovaco', 'cabelo', 'seio', 'abdômen', 'braço', 'olho', 'mamilo', 'umbigo'];
+corpoMascSing.sort(() => Math.random() - 0.5);
+var corpoFemSing = ['mão', 'cabeça', 'retina', 'testa', 'perna', 'orelha', 'boca', 'clavícula', 'unha', 'narina', 'nádega'];
+corpoFemSing.sort(() => Math.random() - 0.5);
+
 //adjetivos
-var adjetivoF = ['angélica', 'bela', 'única', 'vívida', 'estranha'];
-var adjetivoN = ['radiante', 'exuberante', 'confortante', 'invejável', 'infalível'];
-var adjetivoM = ['cansado', 'ferido', 'amável', 'belo', 'vivo'];
+var adjetivoF = ['angélica', 'bela', 'única', 'vívida', 'estranha', 'sinuosa'];
 adjetivoF.sort(() => Math.random() - 0.5);
+var adjetivoN = ['radiante', 'exuberante', 'confortante', 'invejável', 'infalível'];
 adjetivoN.sort(() => Math.random() - 0.5);
+var adjetivoM = ['cansado', 'ferido', 'amável', 'belo', 'vivo'];
 adjetivoM.sort(() => Math.random() - 0.5);
 
 //###########################Conjugação de verbos
@@ -508,7 +540,9 @@ for (let i = 0; i < 22; i++) {
 //O segundo onde procurar
 var minimo = [];
 minimo.push(abstrato.length);
-minimo.push(senti.length);
+minimo.push(sentiSingPron.length);
+minimo.push(sentiMasc.length);
+minimo.push(sentiFem.length);
 minimo.push(subst1p.length);
 minimo.push(subst2p.length);
 minimo.push(adjetivoF.length);
@@ -526,6 +560,11 @@ var qtd = minimo.map(Number).reduce(function (a, b) {
 var max = minimo.map(Number).reduce(function (a, b) {
   return Math.max(a, b);
 });
-
-console.log(gerundio + participio + infinitivo);
-console.log(reg1SFutPret);
+// console.log(minimo);
+// console.log(qtd);
+// console.log(sentiMasc.length);
+// console.table(sentiMasc);
+// console.log(sentiFem.length);
+// console.table(sentiFem);
+// console.log(sentiSingPron.length);
+console.table(animal);

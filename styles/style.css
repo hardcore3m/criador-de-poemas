@@ -32,11 +32,11 @@ cor 4 #a7ff83
 }
 .fonte-1{
     font-family: Homemade;
-    font-size: 16pt;
+    font-size: 14pt;
 }
 .fonte-2{
     font-family: JustAnotherHand;
-    font-size: 26pt;
+    font-size: 18pt;
 }
 .fonte-3{
     font-family: PatrickHand;
@@ -77,6 +77,13 @@ cor 4 #a7ff83
 body {
     background-color: #a7ff83;
 }
+.titulo{
+    margin-bottom: 15px;
+}
+input{
+    width: 100px;
+    height: 25px;
+}
 
 .gerenciamento {
     width: 850px;
@@ -111,8 +118,7 @@ body {
     padding: 10px;
     margin-left: 10px; 
     height: auto; 
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px;    
 }
 .alterado{
     background-color: #17b978;
