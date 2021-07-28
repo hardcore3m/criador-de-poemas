@@ -1,4 +1,4 @@
-//Verbos Irregulares
+//###########################################################################Verbos Irregulares
 irrInfinitivo = ['ser', 'estar', 'haver', 'pôr', 'saber', 'poder', 'medir', 'fazer', 'vir', 'dar', 'trazer', 'dizer', 'querer', 'pedir', 'ouvir', 'caber']
 irrGerundio = ['sendo', 'estando', 'havendo', 'pondo', 'sabendo', 'podendo', 'medindo', 'fazendo', 'vindo', 'dando', 'trazendo', 'dizendo', 'querendo', 'pedindo', 'ouvindo', 'cabendo']
 irrParticipio = ['sido', 'estado', 'havido', 'posto']
@@ -71,13 +71,13 @@ irr3SImpAf = ['seja', 'esteja', 'haja', 'ponha']
 irr1PImpAf = ['sejamos', 'estejamos', 'hajamos', 'ponhamos']
 irr2PImpAf = ['sede', 'estai', 'havei', 'ponde']
 irr3PImpAf = ['sejam', 'estejam', 'hajam', 'ponham']
-//Imperativo Afirmativo
+//Imperativo Negativo
 irr2SImpNeg = ['sejas', 'estejas', 'hajas', 'põe']
 irr3SImpNeg = ['seja', 'esteja', 'haja', 'ponha']
 irr1PImpNeg = ['sejamos', 'estejamos', 'hajamos', 'ponhamos']
 irr2PImpNeg = ['sejais', 'estejais', 'hajais', 'ponde']
 irr3PImpNeg = ['sejam', 'estejam', 'hajam', 'pondam']
-//Imfinitivo Pessoal
+//Infinitivo Pessoal
 irr1SInfPes = ['ser', 'estar', 'haver']
 irr2SInfPes = ['seres', 'estares', 'haveres']
 irr3SInfPes = ['ser', 'estar', 'haver']
@@ -86,10 +86,69 @@ irr2PInfPes = ['serdes', 'estardes', 'haverdes']
 irr3PInfPes = ['serem', 'estarem', 'haverem']
 
 
-userVerbo = 'ser';
+// #######################Verbos Regulares
+var ar = {
+    infinitivo: "ar",
+    gerundio: "ando",
+    participio: "ado",
+    presInd: ["o", "as", "a", "amos", "ais", "am"],
+    pretImp: ["ava", "avas", "ava", "ávamos", "áveis", "avam"],
+    pretPerf: ["ei", "aste", "ou", "amos", "astes", "aram"],
+    pretMQPerf: ["ara", "aras", "ara", "áramos", "áreis", "aram"],
+    futPres: ["arei", "arás", "ará", "aremos", "areis", "arão"],
+    futPret: ["aria", "arias", "aria", "aríamos", "aríeis", "ariam"],
+    pretImpSub: ["asse", "asses", "asse", "ássemos", "ásseis", "assem"],
+    presSub: ["e", "es", "e", "emos", "eis", "em"],
+    futSub: ["ar", "ares", "ar", "armos", "ardes", "arem"],
+    impAf: ["a", "e", "emos", "ai", "em"],
+    impNeg: ["es", "e", "emos", "eis", "em"],
+    infPes: ["ar", "ares", "ar", "armos", "ardes", "arem"],
+}
+
+var er = {
+    infinitivo: "er",
+    gerundio: "endo",
+    participio: "ido",
+    presInd: ["o", "es", "e", "emos", "eis", "em"],
+    pretImp: ["ia", "ias", "ia", "íamos", "íeis", "iam"],
+    pretPerf: ["ei", "este", "eu", "emos", "estes", "eram"],
+    pretMQPerf: ["era", "eras", "era", "êssemos", "êsseis", "esses"],
+    futPres: ["erei", "erás", "erá", "eremos", "ereis", "erão"],
+    futPret: ["eria", "erias", "eria", "eríamos", "eríeis", "eriam"],
+    pretImpSub: ["esse", "esses", "esse", "ássemos", "ásseis", "essem"],
+    presSub: ["e", "es", "e", "emos", "eis", "em"],
+    futSub: ["er", "eres", "er", "ermos", "erdes", "erem"],
+    impAf: ["e", "a", "amos", "ei", "am"],
+    impNeg: ["as", "a", "amos", "ais", "am"],
+    infPes: ["er", "eres", "er", "ermos", "erdes", "erem"],
+
+}
+
+var ir={
+    infinitivo:"ir",
+    gerundio:"indo",
+    participio:"ido",
+    presInd:["o","es","e","imos","is","em"],
+    pretImp:["ia","ias","ia","íamos","íeis","iam"],
+	pretPerf:["i","iste","iu","imos","istes","iram"],
+	pretMQPerf:["ira","iras","ira","íramos","íreis","iram"],
+	futPres:["irei","irás","irá","iremos","ireis","irão"],
+	futPret:["iria","irias","iria","iríamos","iríeis","iriam"],
+	pretImpSub:["isse","isses","isse","íssemos","ísseis","issem"],
+	presSub:["a","as","a","amos","ais","am"],
+    futSub:["ir","ires","ir","irmos","irdes","irem"],
+    impAf:["e","a","amos","i","am"],
+    impNeg:["as","a","amos","ais","am"],
+    infPes: ["ir", "ires", "ir", "irmos", "irdes", "irem"],
+
+}
+
 function conjugar() {
-    let verboIndex = irrInfinitivo.indexOf(userVerbo)
-    if (irrInfinitivo.includes(userVerbo)===true) {
+    userText = $("#userInput").val()
+    userVerbo = userText.toLowerCase()
+
+    if (irrInfinitivo.includes(userVerbo) === true) {
+        let verboIndex = irrInfinitivo.indexOf(userVerbo)
         $("#conjugarTitulo").html(`Verbo: "${irrInfinitivo[verboIndex]}" - Verbo Irregular`)
         $("#conjugarVerbo").html(`
     <li><b>Infinitivo: </b>${irrInfinitivo[verboIndex]}</li>
@@ -126,11 +185,189 @@ function conjugar() {
     <li><b>Nós </b>${irr1PPretMQPInd[verboIndex]}</li>
     <li><b>Vós </b>${irr2PPretMQPInd[verboIndex]}</li>
     <li><b>Eles, Elas </b>${irr3PPretMQPInd[verboIndex]}</li>
-    `)
-        
-        
-    } else {
-        console.log(`Verbo: "${userVerbo}" - Verbo Regular`);
-    }    
-}
 
+    <h2>Futuro do presente do indicativo</h2>
+    <li><b>Eu </b>${irr1SFutPresInd[verboIndex]}</li>
+    <li><b>Tu </b>${irr2SFutPresInd[verboIndex]}</li>
+    <li><b>Ele, Ela </b>${irr3SFutPresInd[verboIndex]}</li>
+    <li><b>Nós </b>${irr1PFutPresInd[verboIndex]}</li>
+    <li><b>Vós </b>${irr2PFutPresInd[verboIndex]}</li>
+    <li><b>Eles, Elas </b>${irr3PFutPresInd[verboIndex]}</li>
+    
+    <h2>Futuro do Pretérito do indicativo</h2>
+    <li><b>Eu </b>${irr1SFutPretInd[verboIndex]}</li>
+    <li><b>Tu </b>${irr2SFutPretInd[verboIndex]}</li>
+    <li><b>Ele, Ela </b>${irr3SFutPretInd[verboIndex]}</li>
+    <li><b>Nós </b>${irr1PFutPretInd[verboIndex]}</li>
+    <li><b>Vós </b>${irr2PFutPretInd[verboIndex]}</li>
+    <li><b>Eles, Elas </b>${irr3PFutPretInd[verboIndex]}</li>
+
+    <h2>Presente do subjuntivo</h2>
+    <li><b>Eu </b>${irr1SPresSub[verboIndex]}</li>
+    <li><b>Tu </b>${irr2SPresSub[verboIndex]}</li>
+    <li><b>Ele, Ela </b>${irr3SPresSub[verboIndex]}</li>
+    <li><b>Nós </b>${irr1PPresSub[verboIndex]}</li>
+    <li><b>Vós </b>${irr2PPresSub[verboIndex]}</li>
+    <li><b>Eles, Elas </b>${irr3PPresSub[verboIndex]}</li>
+
+    <h2>Pretérito Imperfeito do subjuntivo</h2>
+    <li><b>Eu </b>${irr1SPretImpSub[verboIndex]}</li>
+    <li><b>Tu </b>${irr2SPretImpSub[verboIndex]}</li>
+    <li><b>Ele, Ela </b>${irr3SPretImpSub[verboIndex]}</li>
+    <li><b>Nós </b>${irr1PPretImpSub[verboIndex]}</li>
+    <li><b>Vós </b>${irr2PPretImpSub[verboIndex]}</li>
+    <li><b>Eles, Elas </b>${irr3PPretImpSub[verboIndex]}</li>
+
+    <h2>Futuro do subjuntivo</h2>
+    <li><b>Eu </b>${irr1SFutSub[verboIndex]}</li>
+    <li><b>Tu </b>${irr2SFutSub[verboIndex]}</li>
+    <li><b>Ele, Ela </b>${irr3SFutSub[verboIndex]}</li>
+    <li><b>Nós </b>${irr1PFutSub[verboIndex]}</li>
+    <li><b>Vós </b>${irr2PFutSub[verboIndex]}</li>
+    <li><b>Eles, Elas </b>${irr3PFutSub[verboIndex]}</li>
+
+    <h2>Imperativo Afirmativo</h2>
+    <li><b>Tu </b>${irr2SImpAf[verboIndex]}</li>
+    <li><b>Ele, Ela </b>${irr3SImpAf[verboIndex]}</li>
+    <li><b>Nós </b>${irr1PImpAf[verboIndex]}</li>
+    <li><b>Vós </b>${irr2PImpAf[verboIndex]}</li>
+    <li><b>Eles, Elas </b>${irr3PImpAf[verboIndex]}</li>
+
+    <h2>Imperativo Negativo</h2>
+    <li><b>Tu não</b>${irr2SImpNeg[verboIndex]}</li>
+    <li><b>Ele, Ela não</b>${irr3SImpNeg[verboIndex]}</li>
+    <li><b>Nós não</b>${irr1PImpNeg[verboIndex]}</li>
+    <li><b>Vós não</b>${irr2PImpNeg[verboIndex]}</li>
+    <li><b>Eles, Elas não</b>${irr3PImpNeg[verboIndex]}</li>
+
+    <h2>Infinitivo Pessoal</h2>
+    <li><b>Eu </b>${irr1SInfPes[verboIndex]}</li>
+    <li><b>Tu </b>${irr2SInfPes[verboIndex]}</li>
+    <li><b>Ele, Ela </b>${irr3SInfPes[verboIndex]}</li>
+    <li><b>Nós </b>${irr1PInfPes[verboIndex]}</li>
+    <li><b>Vós </b>${irr2PInfPes[verboIndex]}</li>
+    <li><b>Eles, Elas </b>${irr3PInfPes[verboIndex]}</li>
+    
+    `)
+
+
+
+    } else {
+
+        let conjugacao = userVerbo.slice(-2);
+        let radical = userVerbo.slice(0, -2);
+        let classConjugacao = ''
+        if (conjugacao === 'ar') {
+            classConjugacao = ar
+        } else if (conjugacao === 'er') {
+            classConjugacao = er
+        } else if (conjugacao === 'ir') {
+            classConjugacao = ir
+        }
+        $("#conjugarTitulo").html(`Verbo: "${userVerbo}" - verbo regular`)
+
+
+        $("#conjugarVerbo").html(`
+    <li><b>Infinitivo: </b>${radical+classConjugacao.infinitivo}</li>
+        <li><b>Gerundio: </b>${radical+classConjugacao.gerundio}</li>
+    <li><b>Particípio: </b>${radical+classConjugacao.participio}</li>
+    
+    <h2>Presente do indicativo</h2>
+    <li><b>Eu </b>${radical+classConjugacao.presInd[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.presInd[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.presInd[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.presInd[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.presInd[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.presInd[5]}</li>
+    
+
+        <h2>Pretérito imprefeito do indicativo </h2>
+        <li><b>Eu </b>${radical+classConjugacao.pretImp[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.pretImp[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.pretImp[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.pretImp[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.pretImp[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.pretImp[5]}</li>
+
+        <h2>Pretérito perfeito do indicativo </h2>
+        <li><b>Eu </b>${radical+classConjugacao.pretPerf[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.pretPerf[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.pretPerf[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.pretPerf[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.pretPerf[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.pretPerf[5]}</li>
+
+        <h2>Pretérito mais que perfeito do indicativo </h2>
+        <li><b>Eu </b>${radical+classConjugacao.pretMQPerf[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.pretMQPerf[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.pretMQPerf[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.pretMQPerf[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.pretMQPerf[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.pretMQPerf[5]}</li>
+
+        <h2>Futuro do presente do indicativo</h2>
+        <li><b>Eu </b>${radical+classConjugacao.futPres[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.futPres[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.futPres[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.futPres[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.futPres[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.futPres[5]}</li>
+
+        <h2>Futuro do Pretérito do indicativo</h2>
+        <li><b>Eu </b>${radical+classConjugacao.futPret[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.futPret[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.futPret[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.futPret[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.futPret[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.futPret[5]}</li>
+
+        <h2>Presente do subjuntivo</h2>
+        <li><b>Eu </b>${radical+classConjugacao.presSub[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.presSub[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.presSub[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.presSub[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.presSub[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.presSub[5]}</li>
+
+        <h2>Pretérito Imperfeito do subjuntivo</h2>
+        <li><b>Eu </b>${radical+classConjugacao.pretImpSub[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.pretImpSub[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.pretImpSub[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.pretImpSub[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.pretImpSub[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.pretImpSub[5]}</li>
+
+        <h2>Futuro do subjuntivo</h2>
+        <li><b>Eu </b>${radical+classConjugacao.futSub[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.futSub[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.futSub[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.futSub[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.futSub[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.futSub[5]}</li>
+
+        <h2>Imperativo Afirmativo</h2>
+        <li><b>Tu </b>${radical+classConjugacao.impAf[0]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.impAf[1]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.impAf[2]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.impAf[3]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.impAf[4]}</li>
+
+        <h2>Imperativo Negativo</h2>
+        <li><b>Tu </b>${radical+classConjugacao.impNeg[0]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.impNeg[1]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.impNeg[2]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.impNeg[3]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.impNeg[4]}</li>
+
+        <h2>Infinitivo Pessoal</h2>
+        <li><b>Eu </b>${radical+classConjugacao.infPes[0]}</li>
+    <li><b>Tu </b>${radical+classConjugacao.infPes[1]}</li>
+    <li><b>Ele, Ela </b>${radical+classConjugacao.infPes[2]}</li>
+    <li><b>Nós </b>${radical+classConjugacao.infPes[3]}</li>
+    <li><b>Vós </b>${radical+classConjugacao.infPes[4]}</li>
+    <li><b>Eles, Elas </b>${radical+classConjugacao.infPes[5]}</li>
+
+        `)
+
+    }
+}
