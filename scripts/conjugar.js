@@ -258,13 +258,22 @@ function conjugar() {
         let radical = userVerbo.slice(0, -2);
         let classConjugacao = ''
         if (conjugacao === 'ar') {
+            $("#conjugarTitulo").html(`Verbo: "${userVerbo}" - verbo regular`)
             classConjugacao = ar
         } else if (conjugacao === 'er') {
+            $("#conjugarTitulo").html(`Verbo: "${userVerbo}" - verbo regular`)
+
             classConjugacao = er
         } else if (conjugacao === 'ir') {
+            $("#conjugarTitulo").html(`Verbo: "${userVerbo}" - verbo regular`)
+
             classConjugacao = ir
+        }else{
+            $("#conjugarTitulo").html(``)
+            $("#conjugarVerbo").html(`<b>"${userVerbo}" não é um verbo no infinitivo</b><br>
+            Tente um verbo no infinitivo, como <i>cantar, dançar, sair, estar, prever etc.</i>`)
         }
-        $("#conjugarTitulo").html(`Verbo: "${userVerbo}" - verbo regular`)
+        
 
 
         $("#conjugarVerbo").html(`

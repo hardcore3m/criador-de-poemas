@@ -10,119 +10,144 @@ cor 4 #a7ff83
     font-family: Homemade;
     src: url(/fonts/HomemadeApple-Regular.ttf)
 }
+
 @font-face {
     font-family: JustAnotherHand;
     src: url(/fonts/JustAnotherHand-Regular.ttf)
 }
+
 @font-face {
     font-family: PatrickHand;
     src: url(/fonts/PatrickHand-Regular.ttf)
 }
+
 @font-face {
     font-family: LaBelleAurore;
     src: url(/fonts/LaBelleAurore-Regular.ttf)
 }
+
 @font-face {
     font-family: ShadowsIntoLight;
     src: url(/fonts/ShadowsIntoLight-Regular.ttf)
 }
+
 @font-face {
     font-family: LongCang;
     src: url(/fonts/LongCang-Regular.ttf)
 }
-.fonte-1{
+
+@font-face {
+    font-family: Moonrise;
+    src: url(/fonts/Moonrising.ttf);
+}
+
+@font-face {
+    font-family: Sailer;
+    src: url(/fonts/Lightly\ Sailler\ dafont.otf);
+}
+
+@media (max-width:600px) {
+    .nav {
+        display: flexbox;
+    }
+}
+
+@media (min-width:601px) {
+    .nav {
+        display: flex;
+    }
+}
+
+.fonte-1 {
     font-family: Homemade;
     font-size: 14pt;
 }
-.fonte-2{
+
+.fonte-2 {
     font-family: JustAnotherHand;
     font-size: 18pt;
 }
-.fonte-3{
+
+.fonte-3 {
     font-family: PatrickHand;
-    font-size: 16pt;
+    font-size: 12pt;
 }
-.fonte-4{
+
+.fonte-4 {
     font-family: LaBelleAurore;
     font-size: 16pt;
 }
-.fonte-5{
+
+.fonte-5 {
     font-family: LongCang;
     font-size: 26pt;
 }
-.fonte-6{
+
+.fonte-6 {
     font-family: ShadowsIntoLight;
     font-size: 16pt;
 }
 
-.background-1{
-    background-image: url("/img/oldpaper2.jpeg");
-    background-repeat: no-repeat;
+.fonte-7 {
+    font-family: Moonrise;
+    font-size: 16pt;
+}
+
+header {
+    background: url(/img/caderno.jpg);
     background-size: cover;
+    color: navy;
+    border: 3px darkgreen solid;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
-.background-2{
-    background-image: url("/img/oldpaper.jpg");
-    background-repeat: no-repeat;
+
+.grid-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gridHeader {
+    justify-self: center;
+    width: 100%;
+    text-align: center;
+}
+
+.gridMain {
+    grid-area: main;
+    margin-top: 10px;
+    background: url(/img/paperbkg.jpg);
     background-size: cover;
+    padding: 10px 20px;
+    border: 3px darkgreen solid;
+    border-radius: 25px;
 }
-.main {
-    
-    width: 80%;
-    margin: auto;
+.gridMain h1{
+    text-decoration: underline;
+    text-shadow: darkolivegreen 10px;
+}
+.nav a {
+    text-decoration: none;
+    width: 20%;
+}
+
+.nav div {
     text-align: center;
-    
-    padding: 20px;
+    padding: 3px;
+    margin: 5px;
+    font-weight: bold;
+    color: navy;
 }
 
-body {
-    background-color: #a7ff83;
-}
-.titulo{
-    margin-bottom: 15px;
-}
-input{
-    width: 100px;
-    height: 25px;
+.item3 {
+    grid-area: main;
 }
 
-.gerenciamento {
-    width: 850px;
-    margin: auto;
+.item4 {
+    grid-area: right;
 }
 
-.gerenciamento h1 {
-    background-color: #086972;
-    text-align: center;
-    padding: 5px;
-    width: 800px;
-    border-radius: 10px;
-}
-
-.quadro {
-    background-color: #a7ff83;
-    padding: 5px;
-    width: 800px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.quadro h2, th {
-    background-color: #17b978;
-    padding-top: 5px;
-}
-.original{
-    
-    background-color: #17b978;
-    float: left;
-    width: 45%;
-    padding: 10px;
-    margin-left: 10px; 
-    height: auto; 
-    margin-bottom: 10px;    
-}
-.alterado{
-    background-color: #17b978;
-    float: left;
-    width: 45%;
-    padding: 10px;
+.item5 {
+    grid-area: footer;
 }

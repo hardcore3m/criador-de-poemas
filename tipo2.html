@@ -6,62 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <script src="scripts/jquery-3.5.1.min.js"></script>
+    <title>Os poemas - Mário Quintana</title>
 </head>
 
 <body>
-    <header>
-        <h1>Estrutura 1</h1>
-        <div class="nav">
-            <a href="index.html">Início</a>
-            <a href="tipo1.html">Estrutura 1</a>
-            <a href="tipo2.html">Estrutura 2</a>
-            <a href="tipo3.html">Estrutura 3</a>
-            <a href="tipo4.html">Estrutura 4</a>
-            <a href="gerenciamento.html">Estatísticas para nerds</a>
-            <a href="conjugador.html">Conjugação de verbos</a>
-        </div>
-    </header>
+    <div class="grid-container">
+        <header class="gridHeader">
 
-    <section>
-        
-    </section>
-    <div class="main">
-        <div class="titulo">
-            <h4>Poema Original:Os Poemas <br>
-                Autor:Mário Quintana
-                
-            </h4>
-            <input type="button" value="Sortear" onclick="sorteio();">
-        </div>
-        <div class="original fonte-3 background-1" style="height: 500px;">
-            <h3>Os Poemas</h3>
-            <p>
-                Os poemas são pássaros que chegam <br>
-                não se sabe de onde e pousam<br>
-                no livro que lês
-            </p>
-            <p>
-                Quando fechas o livro, eles alçam voo<br>
-                como de um alçapão.<br>
-                Eles não têm pouso<br>
-                nem porto<br>
-            </p>
-            <p>
-                alimentam-se um instante em cada par de mãos<br>
-                e partem. E olhas, então, essas tuas mãos vazias,<br>
-                no maravilhado espanto de saberes<br>
-                que o alimento deles já estava em ti…<br>
-            </p>
+        </header>
+        <div class="gridMain">
+            <section>
+                <h1>Poema Original:Os Poemas <br>
+                    Autor:Mário Quintana
+
+                </h1>
+                <input type="button" value="Sortear" onclick="sorteio();">
+            </section>
+            <div class="original fonte-3 background-1" style="height: 500px;">
+                <h3>Os Poemas</h3>
+                <p>
+                    Os poemas são pássaros que chegam <br>
+                    não se sabe de onde e pousam<br>
+                    no livro que lês
+                </p>
+                <p>
+                    Quando fechas o livro, eles alçam voo<br>
+                    como de um alçapão.<br>
+                    Eles não têm pouso<br>
+                    nem porto<br>
+                </p>
+                <p>
+                    alimentam-se um instante em cada par de mãos<br>
+                    e partem. E olhas, então, essas tuas mãos vazias,<br>
+                    no maravilhado espanto de saberes<br>
+                    que o alimento deles já estava em ti…<br>
+                </p>
 
 
+            </div>
+            <div class="alterado fonte-3 background-2 " style="height: 500px;">
+                <p id="titulo"></p>
+                <p id="estrofe1"></p>
+                <p id="estrofe2"></p>
+                <p id="estrofe3"></p>
+            </div>
         </div>
-        <div class="alterado fonte-3 background-2 " style="height: 500px;">
-            <p id="titulo"></p>
-            <p id="estrofe1"></p>
-            <p id="estrofe2"></p>
-            <p id="estrofe3"></p>
-        </div>
+
     </div>
     <script>
         function sorteio() {
@@ -72,9 +63,16 @@
                 random.push(temp)
             }
             titulo.innerHTML = '<h3>' + 'Os ' + substMSing[random[0]] + 's' + '</h3>';
-            estrofe1.innerHTML = 'Os ' + substMSing[random[0]] + 's ' + 'são ' + animal[random[1]] + 's' + ' que chegam<br>' + 'não se ' + reg3SPresInd[random[2]] + ' de onde e ' + reg3PPresInd[random[0]] + '<br>' + 'no ' + substMSing[random[3]] + ' que ' + reg2SPresInd[random[4]];
-            estrofe2.innerHTML = 'Quando ' + reg2SPresInd[random[5]] + ' o ' + substMSing[random[3]] + ' , eles alçam voô<br>' + 'como de um ' + substMSing[random[6]] + '.<br>' + 'Eles não tem pouso<br> nem porto';
-            estrofe3.innerHTML = reg3PPresInd[random[7]] + '-se' + ' um instante em cada par de ' + corpo[random[8]] + 's' + '<br>' + 'e ' + reg3PPresInd[random[9]] + '. ' + 'E ' + reg2SPresInd[random[10]] + ', então, essas tuas ' + corpoFemSing[random[11]] + 's vazias,<br>' + 'no maravilhado espanto de ' + reg2SFutSub[random[12]] + '<br>' + 'que o alimento deles já estava em ti';
+            estrofe1.innerHTML = 'Os ' + substMSing[random[0]] + 's ' + 'são ' + animal[random[1]] + 's' +
+                ' que chegam<br>' + 'não se ' + reg3SPresInd[random[2]] + ' de onde e ' + reg3PPresInd[random[0]] +
+                '<br>' + 'no ' + substMSing[random[3]] + ' que ' + reg2SPresInd[random[4]];
+            estrofe2.innerHTML = 'Quando ' + reg2SPresInd[random[5]] + ' o ' + substMSing[random[3]] +
+                ' , eles alçam voô<br>' + 'como de um ' + substMSing[random[6]] + '.<br>' +
+                'Eles não tem pouso<br> nem porto';
+            estrofe3.innerHTML = reg3PPresInd[random[7]] + '-se' + ' um instante em cada par de ' + corpo[random[8]] +
+                's' + '<br>' + 'e ' + reg3PPresInd[random[9]] + '. ' + 'E ' + reg2SPresInd[random[10]] +
+                ', então, essas tuas ' + corpoFemSing[random[11]] + 's vazias,<br>' + 'no maravilhado espanto de ' +
+                reg2SFutSub[random[12]] + '<br>' + 'que o alimento deles já estava em ti';
             estrofe5.innerHTML = '';
             // estrofe6.innerHTML = subst2p[random[21]] + ' ' + presind3ps[random[22]] + ' ' + subst1p[random[23]] + ' como ' + abstrato[random[24]] + '.';
             // estrofe7.innerHTML = subst2p[random[25]] + ' ' + presind3ps[random[26]] + ' ' + subst1p[random[27]] + ' como ' + abstrato[random[28]] + '.';
@@ -85,39 +83,7 @@
             // estrofe12.innerHTML = subst2p[random[47]] + ' ' + presind3ps[random[48]] + ' ' + subst1p[random[49]] + ' como ' + abstrato[random[50]] + '.';
         }
     </script>
-    <footer>
-        <style>
-            footer {
-                clear: both;
-                background-color: #CCC;
-                height: 100px;
-                margin-top: 20px;
-                width: 100%;
-            }
 
-            footer img {
-                width: 80px;
-                margin-top: 15px;
-                margin-left: 15px;
-                padding-right: 15px;
-                border-right: solid 2px;
-            }
-
-            footer p {
-                display: inline;
-                padding-left: 15px;
-
-            }
-
-            .footerlink {
-
-                float: right;
-            }
-        </style>
-        <img src="img/oxstudio.png" alt="">
-        <p>OX Studio - Rafael Marins | 2021</p>
-        <p class="footerlink"><a href="gerenciamento.html">Sobre o projeto</a></p>
-    </footer>
     <script src="scripts/dicionario.js"></script>
     <script src="scripts/main.js"></script>
 </body>
