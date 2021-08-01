@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/jquery-3.5.1.min.js"></script>
+    <title>Poema Aleatório</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="gridHeader">
+        
+        </header>
+        <div class="gridMain">
+            <section class="fonte-3">
+                <h1>Poema aleatório com quatro estrofes</h1>
+                <input type="button" value="Sortear" onclick="sorteio();">
+            </section>
+            <section>
+                <div class="main fonte-3 background-1">
+                    <p id="titulo"></p>
+                    <p id="estrofe1"></p>
+                    <p id="estrofe2"></p>
+                    <p id="estrofe3"></p>
+                    <p id="estrofe4"></p>
+                    <br>
+                    <p id="estrofe5"></p>
+                    <p id="estrofe6"></p>
+                    <p id="estrofe7"></p>
+                    <p id="estrofe8"></p>
+                    <br>
+                    <p id="estrofe9"></p>
+                    <p id="estrofe10"></p>
+                    <p id="estrofe11"></p>
+                    <p id="estrofe12"></p>
+                    <p id="assinatura" style="text-align: right; font-size: 14pt;">Rafael Marins</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script>
+        function sorteio() {
+            var palavras = 51;
+            var random = [];
+            for (var i = 0; i < palavras; i++) {
+                var temp = Math.floor(Math.random() * qtd);
+                random.push(temp)
+            }
+            titulo.innerHTML = '<h3>' + abstrato[random[8]] + '</h3>';
+            estrofe1.innerHTML = subst2p[random[0]] + ' ' + irr3SPresInd[random[1]] + ' meu ' + corpoMascSing[random[2]] + ' como ' + abstrato[random[3]] + '.';
+            estrofe2.innerHTML = subst2p[random[5]] + ' de ' + adjetivoM[random[6]] + ' feitio e ' + adjetivoN[random[7]] + ' pudor ';
+            estrofe3.innerHTML = irr1SPretPerfInd[random[9]] + ' ' + sentiSingPron[random[10]] + ' ' + adjetivoN[random[11]] + ' n' + abstrato[random[12]] + '.';
+            estrofe4.innerHTML = irr1SPretPerfInd[random[13]] + ' meu ' + corpoMascSing[random[14]] + ' na tua ' + corpoFemSing[random[15]] + ' enquanto ' + irr2SPretImpInd[random[16]] + ' ' +substMSing[random[17]];
+            estrofe5.innerHTML = irr1SPresInd[random[19]] + '-te com ' +subst1p[random[20]] + ' enquanto '+irr1SPresInd[random[21]]+' '+ abstrato[random[22]];
+            estrofe6.innerHTML ='lá '+ irr3PPretImpInd[random[23]] + ' tantos momentos de ' +sentiMasc[random[24]] + ' e '+sentiFem[random[25]];
+            // estrofe7.innerHTML = corpoFemSing[random[25]] + ' ' + irr3SPresInd[random[26]] + ' ' + corpoMascSing[random[27]] + ' como ' + abstrato[random[28]] + '.';
+            // estrofe8.innerHTML = corpoFemSing[random[29]] + ' ' + irr3SPresInd[random[30]] + ' ' + corpoMascSing[random[31]] + ' como ' + abstrato[random[32]] + '.';
+            // estrofe9.innerHTML = corpoFemSing[random[33]] + ' ' + irr3SPresInd[random[34]] + ' ' + corpoMascSing[random[35]] + ' como ' + abstrato[random[36]] + '.';
+            // estrofe10.innerHTML = corpoFemSing[random[37]] + ' ' + irr3SPresInd[random[38]] + ' ' + corpoMascSing[random[39]] + ' como ' + abstrato[random[40]] + '.';
+            // estrofe11.innerHTML = corpoFemSing[random[43]] + ' ' + irr3SPresInd[random[44]] + ' ' + corpoMascSing[random[45]] + ' como ' + abstrato[random[46]] + '.';
+            // estrofe12.innerHTML = corpoFemSing[random[47]] + ' ' + irr3SPresInd[random[48]] + ' ' + corpoMascSing[random[49]] + ' como ' + abstrato[random[50]] + '.';
+        }
+    </script>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/dicionario2.js"></script>
+</body>
+
+</html>

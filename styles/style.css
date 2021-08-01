@@ -122,6 +122,7 @@ header {
     padding: 10px 20px;
     border: 3px darkgreen solid;
     border-radius: 25px;
+    text-align: justify;
 }
 .gridMain h1{
     text-decoration: underline;
@@ -150,4 +151,12 @@ header {
 
 .item5 {
     grid-area: footer;
+}
+#estatisticas ul{
+    list-style: outside disc ;
+    
+}
+#estatisticas ul li{
+    margin-bottom: 10px;
+    
 }

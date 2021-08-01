@@ -6,58 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <script src="scripts/jquery-3.5.1.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <section class="gerenciamento">
-        <h1>Gerenciamento de dados do dicionário</h1>
+    <div class="grid-container fonte-3">
+        <header class="gridHeader">
 
-        <div class="quadro">
-            <div>
-                <h2>Estatísticas</h2>
-                <p id="estatisticas"></p>
-            </div>
-            <table id="dados"> </table>
+        </header>
+        <div class="gridMain">
+            <section class="fonte-3">
+                <h1>Informações sobre o projeto</h1>
+
+            </section>
+            <section id="estatisticas">
+
+            </section>
 
         </div>
-
-        <div class="quadro">
-            <div>
-                <h2>Verbos</h2>
-                <p id="qtdVerbos"></p>
-            </div>
-            <table id="presind">
-                <tr>
-                    <th> Presente do indicativo</th>
-                </tr>
-                <tr>
-                    <td id="presind1psConj"></td>
-                </tr>
-            </table>
-        </div>
-    </section>
+    </div>
+    <script src="scripts/dicionario2.js"></script>
+    <script src="scripts/conjugar.js"></script>
+    <script src="scripts/main.js"></script>
     <script>
-        function controleDeDados() {
+        $('#estatisticas').append(
+            `<h3>Tamanhos dos bancos de palavras do gerador de poemas</h3>
+                <ul>
+                    <li><b>Menor banco de palavras: </b>${qtd}.</li>
+                    <li><b>Maior banco de palavras: </b>${max}.</li>
+                </ul>
+                
+                <h3>Sentimentos</h3>
+                <ul>
+                <li><b>Sentimentos no gênenro masculino (${sentiMasc.length}) : </b>${sentiMasc.join(' | ')}.</li>
+                <li><b>Sentimentos no gênenro feminino (${sentiFem.length}) : </b>${sentiFem.join(' | ')}.</li>
+                <li><b>Sentimentos (${sentiSing.length}) : </b>${sentiSing.join(' | ')}.</li>
+                <li><b>Sentimentos com pronome em segunda pessoa (${sentiSingPron.length}) : </b>${sentiSingPron.join(' | ')}.</li>
+                </ul>
 
-            var abstratos = '<tr><th>Abstratos</th></tr>' + '<tr><td><b> Quantidade: ' + abstrato.length + '</b></td></tr>' + '<tr><td>' + abstrato + '</td></tr>';
-            var sentimentos = '<tr><th>Verbo Sentir</th></tr>' + '<tr><td><b> Quantidade: ' + senti.length + '</b></td></tr>' + '<tr><td>' + senti + '</td></tr>';
-            var substs1p = '<tr><th>Substantivos pronominados em primeira pessoa</th></tr>' + '<tr><td><b> Quantidade: ' + subst1p.length + '</b></td></tr>' + '<tr><td>' + subst1p + '</td></tr>';
-            var substs2p = '<tr><th>Substantivos pronominados em segunda pessoa</th></tr>' + '<tr><td><b> Quantidade: ' + subst2p.length + '</b></td></tr>' + '<tr><td>' + subst2p + '</td></tr>';
-            var adjetivosM = '<tr><th>Adjetivos Masculinos</th></tr>' + '<tr><td><b> Quantidade: ' + adjetivoM.length + '</b></td></tr>' + '<tr><td>' + adjetivoM + '</td></tr>';
-            var adjetivosF = '<tr><th>Adjetivos Femininos</th></tr>' + '<tr><td><b> Quantidade: ' + adjetivoF.length + '</b></td></tr>' + '<tr><td>' + adjetivoF + '</td></tr>';
-            var adjetivosN = '<tr><th>Adjetivos Neutros</th></tr>' + '<tr><td><b> Quantidade: ' + adjetivoN.length + '</b></td></tr>' + '<tr><td>' + adjetivoN + '</td></tr>';
+                <h3>Substantivos</h3>
+                <ul>
+                <li><b>Substantivos masculinos (${substMSing.length}) : </b>${substMSing.join(' | ')}.</li>
+                <li><b>Substantivos Femininos (${substFSing.length}) : </b>${substFSing.join(' | ')}.</li>
+                <li><b>Com pronome em primeira pessoa do singular (${subst1p.length}) : </b>${subst1p.join(' | ')}.</li>
+                <li><b>Com pronome em segunda pessoa do singular (${subst2p.length}) : </b>${subst2p.join(' | ')}.</li>
+                <li><b>Animais (${animal.length}) : </b>${animal.join(' | ')}.</li>
+                <li><b>Animais no feminino (${animalFem.length}) : </b>${animalFem.join(' | ')}.</li>
+                <li><b>Animais no Masculino (${animalMasc.length}) : </b>${animalMasc.join(' | ')}.</li>
+                </ul>
 
-            dados.innerHTML = abstratos + sentimentos + substs1p+substs2p + adjetivosM + adjetivosN + adjetivosF;
+                <h3>Partes do corpo</h3>
+                <ul>
+                <li><b>Partes (${corpo.length}) : </b>${corpo.join(' | ')}.</li>
+                <li><b>Masculinas (${corpoMascSing.length}) : </b>${corpoMascSing.join(' | ')}.</li>
+                <li><b>Femininas (${corpoFemSing.length}) : </b>${corpoFemSing.join(' | ')}.</li>
+                </ul>
 
-            estatisticas.innerHTML = 'Menor Valor de array: ' + qtd + '<br>' + 'Maior Valor de array: ' + max + '<br>';
-            qtdVerbos.innerHTML = 'Quantidade de verbos: ' + presind1ps.length;
-            presind1psConj.innerHTML = presind1ps;
+                <h3>Adjetivos</h3>
+                <ul>
+                <li><b>Neutros (${adjetivoN.length}) : </b>${adjetivoN.join(' | ')}.</li>
+                <li><b>Masculinos (${adjetivoM.length}) : </b>${adjetivoM.join(' | ')}.</li>
+                <li><b>Femininos (${adjetivoF.length}) : </b>${adjetivoF.join(' | ')}.</li>
+                </ul>
 
-        }
-        window.onload = controleDeDados;
-    </script>
-    <script src="scripts/dicionario.js"></script>
+                <h3>Abstrações</h3>
+                <ul>
+                <li><b>Partes (${abstrato.length}) : </b>${abstrato.join(' | ')}.</li>
+                                </ul>
+                `
+        )
+0    </script>
+
 </body>
 
 </html>

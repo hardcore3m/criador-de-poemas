@@ -48,7 +48,7 @@ var corpoFemSing = ['mão', 'cabeça', 'retina', 'testa', 'perna', 'orelha', 'bo
 corpoFemSing.sort(() => Math.random() - 0.5);
 
 //adjetivos
-var adjetivoF = ['angélica', 'bela', 'única', 'vívida', 'estranha', 'sinuosa'];
+var adjetivoF = ['angélica', 'bela', 'única', 'vívida', 'estranha', 'sinuosa','límpida'];
 adjetivoF.sort(() => Math.random() - 0.5);
 var adjetivoN = ['radiante', 'exuberante', 'confortante', 'invejável', 'infalível'];
 adjetivoN.sort(() => Math.random() - 0.5);
